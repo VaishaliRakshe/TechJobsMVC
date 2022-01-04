@@ -7,11 +7,15 @@
     <tr>
         @foreach(var column in ViewBag.columns)
         {
-            <th>@column.Value</th>
+             @if (column.Key != "all")
+            {
+                <th>@column.Value</th>
+            }
         }
     </tr>
     <tr>
-        @{
+        @foreach (var category in ViewBag.tableChoices)
+        {
             //TODO #2: Complete the View Jobs By Category Table
         }
 
@@ -30,4 +34,4 @@
             </td>
         }
     </tr>
-        </table>
+</table>
