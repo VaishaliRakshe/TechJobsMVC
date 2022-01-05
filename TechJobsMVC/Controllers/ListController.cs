@@ -32,6 +32,7 @@ namespace TechJobsMVC.Controllers
         {
             ViewBag.columns = ColumnChoices;
             ViewBag.tableChoices = TableChoices;
+            ViewBag.all = JobData.FindAll();
             ViewBag.employers = JobData.GetAllEmployers();
             ViewBag.locations = JobData.GetAllLocations();
             ViewBag.positionTypes = JobData.GetAllPositionTypes();
